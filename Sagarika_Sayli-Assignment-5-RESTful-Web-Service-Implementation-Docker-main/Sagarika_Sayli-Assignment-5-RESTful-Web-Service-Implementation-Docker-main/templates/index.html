@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <style type="text/css">
+       body {
+       background-image: url("https://images.all-free-download.com/images/graphiclarge/blue_abstract_background_310971.jpg");
+       background-size: cover;
+       font-size: 18px;
+       }
+       .table td, .table th {
+       border-top: 1px solid rgb(7, 7, 7);
+       }
+       h1 {
+       text-align: center;
+       background-color: rgb(62, 167, 228);
+       height: 40%;
+       }
+       
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Student Details</h1>
+     </header>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Class</th>
+                <th scope="col">Name</th>
+                <th scope="col">Grade</th>
+                <th scope="col">Subject</th>
+                <th scope="col">Pass_Fail</th>
+                <th scope="col">Year</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for item in items %}
+
+        <tr>
+            <td scope="row"> {{ item.Class }}</td>
+            <td scope="row"> {{ item.Name }} </td>
+            <td scope="row"> {{ item.Grade }} </td>
+            <td scope="row"> {{ item.Subject }} </td>
+            <td scope="row"> {{ item.Pass_Fail }} </td>
+            <td scope="row"> {{ item.Year}} </td>
+        </tr>
+        {% endfor %}
+        </tbody>    
+    </table>
+
+</body>
+</html>
